@@ -1,0 +1,32 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": [
+        "logs:CreateLogGroup",
+        "logs:CreateLogStream",
+        "logs:PutLogEvents",
+        "logs:DescribeLogStreams"
+      ],
+      "Resource": ["arn:aws:logs:${REGION}:${accountID}:*"]
+    },
+    {
+      "Effect": "Allow",
+      "Action": [
+        "ec2:DescribeInstanceStatus"
+      ],
+      "Resource": ["*"]
+    },
+    {
+      "Effect": "Allow",
+      "Action": "cloudwatch:PutMetricData",
+      "Resource": ["*"]
+    },
+    {
+      "Effect": "Allow",
+      "Action": "lambda:InvokeFunction",
+      "Resource": ["arn:aws:lambda:${REGION}:${accountID}:function:*"]
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "name": "package-typescript-lambda",
+  "version": "1.0.0",
+  "scripts": {
+    "test": "vitest",
+    "build": "cd scripts && sh build.sh",
+    "start": "tsx src/index.ts"
+  },
+  "keywords": [
+    "typescript",
+    "lambda",
+    "Docker"
+  ],
+  "description": "Example package.json for a typescript lambda. This will transpile src/index.ts into dist/index.js, then use Docker to install node_modules before zipping for amazon environment",
+  "dependencies": {
+    "@aws-sdk/client-cloudwatch": "^3.691.0",
+    "@aws-sdk/client-ec2": "^3.52.0"
+  },
+  "devDependencies": {
+    "@types/aws-lambda": "^8.10.145",
+    "@types/node": "^22.7.9",
+    "tsx": "^4.19.1",
+    "typescript": "^5.6.3",
+    "vitest": "^2.1.4"
+  },
+  "main": "index.js",
+  "files": [
+    "index.js",
+    "package.json",
+    "package-lock.json",
+    "node_modules/"
+  ]
+}

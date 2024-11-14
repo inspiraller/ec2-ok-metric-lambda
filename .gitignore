@@ -1,0 +1,11 @@
+
+user-data.txt
+.env
+*.pem
+node_modules
+policy-event-invoke-lambda.json
+policy.json
+dist 
+pnpm-lock.yml
+on-restart.sh
+lambda-function.zip

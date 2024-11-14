@@ -1,0 +1,29 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+      {
+        "Effect": "Allow",
+        "Action": [
+          "ec2:StartInstances"
+        ],
+        "Resource": ["arn:aws:ec2:${REGION}:${accountID}:instance/*"]
+      },
+      {
+        "Effect": "Allow",
+        "Action": [
+          "ecs:UpdateService",
+          "ecs:DescribeServices"
+        ],
+        "Resource": ["*"]
+      },
+      {
+        "Effect": "Allow",
+        "Action": [
+          "cloudwatch:SetAlarmState"
+        ],
+        "Resource": [
+          "arn:aws:cloudwatch:${REGION}:${accountID}:alarm:*"
+        ]
+      }
+    ]
+  }
