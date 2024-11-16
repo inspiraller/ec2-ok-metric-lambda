@@ -12,10 +12,6 @@
     "Docker"
   ],
   "description": "Example package.json for a typescript lambda. This will transpile src/index.ts into dist/index.js, then use Docker to install node_modules before zipping for amazon environment",
-  "dependencies": {
-    "@aws-sdk/client-cloudwatch": "^3.691.0",
-    "@aws-sdk/client-ec2": "^3.52.0"
-  },
   "devDependencies": {
     "@types/aws-lambda": "^8.10.145",
     "@types/node": "^22.7.9",
